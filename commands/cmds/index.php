@@ -2,7 +2,7 @@
 if ($update['patient']) {
     return 0;
 }
-if ($update['message']['in'] == true) {
+if ($update['message']['out'] == false) {
     $arg = explode(" ",$update['message']['message']);
     foreach ($arg as $key => $val) {
         $arg[$key] = strtolower($val);
