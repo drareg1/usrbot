@@ -19,6 +19,6 @@ if ($update['message']['out'] == true) {
         $numeri = range(1, 90);
         shuffle($numeri); $text = "$numeri[0] $numeri[1] $numeri[2]";
         
-        $MadelineProto->messages->sendMessage(['peer' => $update['message']['to_id'], 'message' => $text ]);
+        $MadelineProto->messages->editMessage(['peer' => $update['message']['to_id'], 'message' => $text ]);
     }
 }
